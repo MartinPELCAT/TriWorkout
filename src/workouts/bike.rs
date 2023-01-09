@@ -13,7 +13,9 @@ impl Workout for BikeWorkout {
 
     fn start_planning(&self) -> Result<(), Error> {
         println!("Welcome to the bike workout planner");
-
+        self.ask_for_notes();
+        let intensity = self.ask_for_intensity();
+        println!("Intensity {:?}", intensity);
         Ok(())
     }
 }
